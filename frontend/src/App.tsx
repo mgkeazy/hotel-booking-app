@@ -7,6 +7,7 @@ import AddHotel from './pages/AddHotel';
 import { UseAppContext } from './contexts/AppContext';
 import MyHotels from './pages/MyHotel';
 import EditHotel from './pages/EditHotel';
+import Search from './pages/Search';
 // import './App.css'
 
 const App = ()=> {
@@ -19,13 +20,13 @@ const App = ()=> {
         <Route path="/" element ={<Layout>
           <p>Home Page</p>
         </Layout>} />
+
         <Route path="/search" element={
           <Layout>
-            <p>
-              Search Page
-            </p>
+            <Search/>
           </Layout>
         }/>
+
         <Route path='/register' element={<Layout>
           <Register/>
           </Layout>}/>
@@ -53,6 +54,8 @@ const App = ()=> {
             }/>
           </>
           }
+
+
           
         <Route path ="*" element= {<Navigate to ="/" />}/>
       </Routes>
