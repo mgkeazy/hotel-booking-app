@@ -9,6 +9,7 @@ import MyHotels from './pages/MyHotel';
 import EditHotel from './pages/EditHotel';
 import Search from './pages/Search';
 import Detail from './pages/Detail';
+import Booking from './pages/Booking';
 // import './App.css'
 
 const App = ()=> {
@@ -35,9 +36,11 @@ const App = ()=> {
           </Layout>
         }/>
 
-        <Route path='/register' element={<Layout>
+        <Route path='/register' element={
+          <Layout>
           <Register/>
-          </Layout>}/>
+          </Layout>}
+        />
 
         <Route path="/sign-in" element={<Layout>
           <SignIn/>
@@ -45,6 +48,12 @@ const App = ()=> {
 
           {isLoggedIn && 
           <>
+            <Route path="/hotel/:hotelId/booking" element={
+              <Layout>
+                <Booking />
+              </Layout>
+            }/>
+
             <Route path="/add-hotel" element={
               <Layout>
                 <AddHotel />
