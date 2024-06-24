@@ -8,6 +8,7 @@ import { UseAppContext } from './contexts/AppContext';
 import MyHotels from './pages/MyHotel';
 import EditHotel from './pages/EditHotel';
 import Search from './pages/Search';
+import Detail from './pages/Detail';
 // import './App.css'
 
 const App = ()=> {
@@ -24,6 +25,13 @@ const App = ()=> {
         <Route path="/search" element={
           <Layout>
             <Search/>
+          </Layout>
+        }/>
+
+
+        <Route path="/detail/:hotelId" element={
+          <Layout>
+            <Detail/>
           </Layout>
         }/>
 
