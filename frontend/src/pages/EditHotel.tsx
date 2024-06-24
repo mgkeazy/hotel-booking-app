@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import * as apiClient from  "../api-client"
 import ManageHotelForm from "../forms/ManageHotelForm/ManageHotelForm";
 import {UseAppContext} from "../contexts/AppContext";
-import { shouldProcessLinkClick } from "react-router-dom/dist/dom";
+// import { shouldProcessLinkClick } from "react-router-dom/dist/dom";
 
 
 const EditHotel = ()=>{
